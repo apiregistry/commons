@@ -1,8 +1,8 @@
 #%RAML 1.0 Library
 annotationTypes:
-  ProcessorLocation:
-     type: string
-     description: Location of your processor
+  Links:
+     type: Link[]
+     description: Related links
   Id:
     type: string
     description: "Global id of the artifact"
@@ -23,3 +23,8 @@ types:
       name: string
       email: string
       profiles?: string[]
+  Link:
+    properties:
+      title: string
+      url: string
+      role?: string
