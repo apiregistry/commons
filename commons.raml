@@ -6,6 +6,9 @@ annotationTypes:
   Id:
     type: string
     description: "Global id of the artifact"
+  Title: 
+    type: string  
+    description: "Short human readable name of the thing"
   GroupId:
     type: string
     description: "Group id of the artifact"
@@ -16,4 +19,4 @@ types:
     properties:
       name: string
       email: string
-      profile: string
+      profiles?: string[]
