@@ -6,25 +6,72 @@ annotationTypes:
   Id:
     type: string
     description: "Global id of the artifact"
-  Title: 
-    type: string  
-    description: "Short human readable name of the thing"
-  Tags: 
+    allowedTargets: [ Library, API, Extension, Overlay]
+  Tags:
     type: string[]
     description: "Semantic tags associated with the thing"
   GroupId:
     type: string
     description: "Group id of the artifact"
-  Authors: Author[]
+    allowedTargets: [ Library, API, Extension, Overlay]
+  Title:
+      type: string
+      description: "Short human readable name of the thing"
+      allowedTargets: Library
+  TermsOfService:
+    type: url
+    description: A URL to the Terms of Service for the API.
+    allowedTargets: [ API, Extension, Overlay ]
+  Authors:
+    type: Contact[]
+    description: Authors information for the exposed API/Library.
+    allowedTargets: [ Library, API, Extension, Overlay]
+  Contacts:
+    type: Contact[]
+    description: The contact information for the exposed API/Library.
+    allowedTargets: [ Library, API, Extension, Overlay]
   Version: string
-types:
-  Author:
+  License:
     properties:
       name: string
-      email: string
-      profiles?: string[]
+      url: url
+types:
+  Contact:
+    properties:
+      name:
+         type: string
+         description: The identifying name of the contact person/organization.
+      email:
+        type: email
+        description: The email address of the contact person/organization.
+      links?:
+        type: url[]
+        description: the URLs pointing to the contact information.
   Link:
     properties:
       title: string
-      url: string
+      url: url
       role?: string
+  url:
+    description: URL
+    type: string
+    example: http://someorg.org
+  email:
+    description: Email
+    type: string
+    example: john.doe@someorg.org
+(Version): 0.0.2
+(Authors):
+  - name: Pavel Petrochenko
+    email: pavel@onpositive.com
+    url: https://github.com/petrochenko-pavel-a
+(Contacts):
+  - name: Pavel Petrochenko
+    email: pavel@onpositive.com
+    url: https://github.com/petrochenko-pavel-a
+(Id): org.aml.common.meta
+(GroupId): org.aml.core
+(Title): Common meta annotations for APIs and libraries
+(License):
+  name: Apache 2.0
+  url: http://www.apache.org/licenses/LICENSE-2.0
