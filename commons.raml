@@ -1,5 +1,12 @@
 #%RAML 1.0 Library
+usage:
+  this library contains a set of annotations which might be used to represent
+  common meta information about RAML objects
 annotationTypes:
+  Depricated:
+    type: nil
+    description: allows to mark entity as depricated
+    allowedTargets: [Resource,Method,TypeDeclaration]
   Links:
      type: Link[]
      description: Related links
@@ -74,4 +81,12 @@ types:
 (Title): Common meta annotations for APIs and libraries
 (License):
   name: Apache 2.0
-  url: http://www.apache.org/licenses/LICENSE-2.0
+  url: "http://www.apache.org/licenses/LICENSE-2.0"
+(Links):
+  - title: Issues and Suggestions
+    url: "https://github.com/apiregistry/commons/issues"
+    role: issues
+
+  - title: Project url
+    url: "https://github.com/apiregistry/commons/"
+    role: project
