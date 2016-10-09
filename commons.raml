@@ -13,7 +13,10 @@ annotationTypes:
   Id:
     type: string
     description: "Global id of the artifact"
-    allowedTargets: [ Library, API, Extension, Overlay]
+    allowedTargets: [ Library, API, Extension, Overlay]  
+  Icons: 
+    type: IconLink[]
+    description: "Images associated with item"
   Tags:
     type: string[]
     description: "Semantic tags associated with the thing"
@@ -43,6 +46,12 @@ annotationTypes:
       name: string
       url: url
 types:
+  IconLink:
+    properties:
+      url: string
+      name?: string
+      width?: integer
+      height?: integer
   Contact:
     properties:
       name:
