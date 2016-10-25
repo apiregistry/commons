@@ -23,6 +23,10 @@ annotationTypes:
   LogicalStucture: 
      type: string[]
      description: "Represents location of item in semantic tree of items of this type"
+  EnumDescriptions: 
+     type: string[]
+     description: "Allows to provide human readable descriptions for allowed enum values"    
+     allowedTargets: [ TypeDeclaration ]  
   GroupId:
     type: string
     description: "Group id of the artifact"
@@ -79,7 +83,7 @@ types:
     description: Email
     type: string
     example: john.doe@someorg.org
-(Version): 0.0.2
+(Version): 0.0.4
 (Authors):
   - name: Pavel Petrochenko
     email: pavel@onpositive.com
