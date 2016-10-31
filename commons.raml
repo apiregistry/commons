@@ -13,20 +13,20 @@ annotationTypes:
   Id:
     type: string
     description: "Global id of the artifact"
-    allowedTargets: [ Library, API, Extension, Overlay, Resource, Method]  
-  Icons: 
+    allowedTargets: [ Library, API, Extension, Overlay, Resource, Method]
+  Icons:
     type: IconLink[]
     description: "Images associated with item"
   Tags:
     type: string[]
     description: "Semantic tags associated with the thing"
-  LogicalStructure: 
+  LogicalStructure:
      type: string[]
      description: "Represents location of item in semantic tree of items of this type"
-  EnumDescriptions: 
+  EnumDescriptions:
      type: string[]
-     description: "Allows to provide human readable descriptions for allowed enum values"    
-     allowedTargets: [ TypeDeclaration ]  
+     description: "Allows to provide human readable descriptions for allowed enum values"
+     allowedTargets: [ TypeDeclaration ]
   GroupId:
     type: string
     description: "Group id of the artifact"
@@ -79,6 +79,34 @@ types:
     description: URL
     type: string
     example: http://someorg.org
+  uri:
+      description: URI
+      type: string
+      example: http://someorg.org
+  base64uri:
+      description: URI
+      type: string
+      example: http://someorg.org
+  countrycode:
+      description: 2 digits country code
+      type: string
+      example: ru
+  ipv4:
+      description: ipv4
+      type: string
+      example: 127.0.0.1
+  ipv6:
+      description: ipv6
+      type: string
+  json:
+      description: string with json object inside
+      type: string
+  uuid:
+    description: UUID of the thing
+    type: string
+  password:
+      description: string containing password
+      type: string
   email:
     description: Email
     type: string
