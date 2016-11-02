@@ -47,6 +47,10 @@ annotationTypes:
     type: Contact[]
     description: The contact information for the exposed API/Library.
     allowedTargets: [ Library, API, Extension, Overlay]
+  OathScopeDescriptions:
+     type: string[]
+     description: Description of the oath scopes
+     allowedTargets: [SecurityScheme]
   Version: string
   License:
     properties:
@@ -78,7 +82,7 @@ types:
   url:
     description: URL
     type: string
-    example: http://someorg.org  
+    example: http://someorg.org
   base64url:
       description: URI
       type: string
