@@ -6,14 +6,14 @@ annotationTypes:
   Depricated:
     type: nil
     description: allows to mark entity as depricated
-    allowedTargets: [Resource,Method,TypeDeclaration]
+    allowedTargets: [Resource,Method,TypeDeclaration,Library, API, Extension, Overlay]
   Links:
      type: Link[]
      description: Related links
   Id:
     type: string
     description: "Global id of the artifact"
-    allowedTargets: [ Library, API, Extension, Overlay, Resource, Method]
+    allowedTargets: [ Library, API, Extension, Overlay, Resource, Method, TypeDeclaration]
   Icons:
     type: IconLink[]
     description: "Images associated with item"
