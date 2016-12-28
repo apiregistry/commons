@@ -114,6 +114,9 @@ types:
   multiline:
     type: string
     description: This type is a marker type which allows to specify that value is a multiline string
+  GitHubFlavoredMarkdown:
+    type: [multiline, hasMime]
+    contextType: text/gfm
   hasMime:
     type: string
     description: This type is a marker type which allows to specify that value is a string with a particular format
