@@ -111,6 +111,14 @@ types:
     description: Email
     type: string
     example: john.doe@someorg.org
+  multiline:
+    type: string
+    description: This type is a marker type which allows to specify that value is a multiline string
+  hasMime:
+    type: string
+    description: This type is a marker type which allows to specify that value is a string with a particular format
+    facets:
+      contextType: string
 (Version): 0.0.4
 (Authors):
   - name: Pavel Petrochenko
